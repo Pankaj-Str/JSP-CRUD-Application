@@ -1,21 +1,47 @@
-<a href="viewusers.jsp">View All Records</a><br/>
 
-<h1>Add New User</h1>
-<form action="adduser.jsp" method="post">
-<table>
-<tr><td>Name:</td><td><input type="text" name="name"/></td></tr>
-<tr><td>Password:</td><td><input type="password" name="password"/></td></tr>
-<tr><td>Email:</td><td><input type="email" name="email"/></td></tr>
-<tr><td>Sex:</td><td><input type="radio" name="sex" value="male"/>Male <input type="radio" name="sex" value="female"/>Female </td></tr>
-<tr><td>Country:</td><td>
-<select name="country" style="width:155px">
-<option>India</option>
-<option>Pakistan</option>
-<option>Afghanistan</option>
-<option>Berma</option>
-<option>Other</option>
-</select>
-</td></tr>
-<tr><td colspan="2"><input type="submit" value="Add User"/></td></tr>
-</table>
-</form>
+ <div class="container mt-5">
+    <form action="adduser.jsp" method="post">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Sex:</label>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="male" name="sex" value="male">
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="female" name="sex" value="female">
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="country" class="form-label">Country:</label>
+        <select class="form-select" id="country" name="country">
+  <option value="India">India</option>
+  <option value="Pakistan">Pakistan</option>
+  <option value="Afghanistan">Afghanistan</option>
+  <option value="Burma">Burma</option>
+  <option value="Australia">Australia</option>
+  <option value="Canada">Canada</option>
+  <option value="Brazil">Brazil</option>
+  <option value="France">France</option>
+  <option value="Japan">Japan</option>
+  <option value="Mexico">Mexico</option>
+  <option value="South Africa">South Africa</option>
+  <option value="Other">Other</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Add User</button>
+    </form>
+  </div>
+
